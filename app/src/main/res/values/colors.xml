@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Light Mode Colors -->
+    <color name="purple_light_primary">#6A1B9A</color>       <!-- Ungu Gelap -->
+    <color name="purple_light_primary_variant">#4A0072</color> <!-- Ungu Lebih Gelap -->
+    <color name="purple_light_secondary">#AB47BC</color>      <!-- Ungu Cerah -->
+    <color name="purple_light_background">#F3E5F5</color>     <!-- Latar Belakang Ungu Muda -->
+
+    <!-- Dark Mode Colors -->
+    <color name="purple_dark_primary">#4A0072</color>
+    <color name="purple_dark_primary_variant">#2A0042</color>
+    <color name="purple_dark_secondary">#BA68C8</color>
+    <color name="purple_dark_background">#000000</color>     <!-- Latar Belakang Gelap -->
+
+    <!-- Additional Colors -->
+    <color name="navy">#362F59</color>
+</resources>

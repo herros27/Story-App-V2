@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.StoryApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/purple_light_primary</item>
+        <item name="colorPrimaryVariant">@color/purple_light_primary_variant</item>
+        <item name="colorSecondary">@color/purple_light_secondary</item>
+        <item name="android:colorBackground">@color/purple_light_background</item>
+        <item name="android:windowBackground">@color/purple_light_background</item>
+    </style>
+
+    <style name="Theme.StoryApp" parent="Base.Theme.StoryApp" />
+
+    <style name="Theme.StoryApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomAlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="android:background">?attr/colorBackgroundFloating</item>
+        <item name="android:textColorPrimary">?attr/colorOnBackground</item>
+        <item name="android:colorAccent">?attr/colorPrimary</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/CustomDialogButton.Positive</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/CustomDialogButton.Negative</item>
+    </style>
+
+    <style name="CustomDialogButton.Positive" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="CustomDialogButton.Negative" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">?attr/colorSecondary</item>
+    </style>
+
+<!--    &lt;!&ndash; Positive Button Style for Light Mode &ndash;&gt;-->
+<!--    <style name="CustomDialogButton.Positive.Light" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">-->
+<!--        <item name="android:textColor">@color/purple_light_primary</item>-->
+<!--    </style>-->
+
+<!--    &lt;!&ndash; Negative Button Style for Light Mode &ndash;&gt;-->
+<!--    <style name="CustomDialogButton.Negative.Light" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">-->
+<!--        <item name="android:textColor">@color/navy</item>-->
+<!--    </style>-->
+
+    <style name="Button.Primary" parent="Widget.MaterialComponents.Button">
+        <!-- Background color set to match the color of the AppBar -->
+        <item name="backgroundTint">@color/purple_light_primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">8dp</item> <!-- Optional: rounded corners -->
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="CardText.Primary" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="CardView.Primary" parent="Widget.MaterialComponents.CardView">
+        <!-- Corner radius for rounded corners -->
+        <item name="cardCornerRadius">4dp</item>
+        <!-- Card background color -->
+        <item name="cardBackgroundColor">@color/purple_light_secondary</item>
+        <!-- Optional: Set card elevation for shadow effect -->
+
+        <item name="cardElevation">4dp</item>
+    </style>
+
+    <style name="Theme.StoryApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.StoryApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

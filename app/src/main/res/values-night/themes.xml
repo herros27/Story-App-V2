@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.StoryApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <!-- Customize your dark theme here. -->
+        <item name="colorPrimary">@color/purple_dark_primary</item>
+        <item name="colorPrimaryVariant">@color/purple_dark_primary_variant</item>
+        <item name="colorSecondary">@color/purple_dark_secondary</item>
+        <item name="android:colorBackground">@color/purple_dark_background</item>
+        <item name="android:windowBackground">@color/purple_dark_background</item>
+    </style>
+
+    <style name="CardText.Primary" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CustomAlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="android:background">?attr/colorBackgroundFloating</item>
+        <item name="android:textColorPrimary">?attr/colorOnBackground</item>
+        <item name="android:colorAccent">?attr/colorPrimary</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/CustomDialogButton.Positive</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/CustomDialogButton.Negative</item>
+    </style>
+
+    <style name="CustomDialogButton.Positive" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="CustomDialogButton.Negative" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">?attr/colorSecondary</item>
+    </style>
+
+    <style name="CardView.Primary" parent="Widget.MaterialComponents.CardView">
+        <!-- Corner radius for rounded corners -->
+        <item name="cardCornerRadius">4dp</item>
+        <!-- Card background color -->
+        <item name="cardBackgroundColor">@color/purple_dark_primary_variant</item>
+        <!-- Optional: Set card elevation for shadow effect -->
+
+        <item name="cardElevation">4dp</item>
+    </style>
+
+    <style name="Theme.StoryApp" parent="Base.Theme.StoryApp" />
+</resources>

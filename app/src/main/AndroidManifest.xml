@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Mengatur fitur yang tidak memerlukan kamera sebagai persyaratan wajib -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" /> <!-- Daftar izin aplikasi -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StoryApp">
+
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBOEujYLNUaxTRqaqtF9nBaclj7FaIf8NA" />
+
+        <activity
+            android:name=".view.ui.maps.MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
+        <!-- Widget dan RemoteViewsService -->
+        <receiver
+            android:name=".view.widget.StoryBannerWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+        <service
+            android:name=".view.widget.WidgetStackService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" /> <!-- Daftar aktivitas aplikasi -->
+        <activity
+            android:name=".view.ui.upload.UploadActivity"
+            android:exported="false"
+            android:theme="@style/Theme.StoryApp" />
+        <activity
+            android:name=".view.ui.cameraGalery.PhotoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ui.detail.DetailActivity"
+            android:exported="false"
+            android:label="@string/title_activity_detail"
+            android:theme="@style/Theme.StoryApp.NoActionBar" />
+        <activity
+            android:name=".view.ui.welcome.WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ui.signup.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ui.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ui.main.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
